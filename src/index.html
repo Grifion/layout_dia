@@ -11,9 +11,40 @@
       rel="stylesheet"
       href="./styles/main.scss"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Dia</h1>
     <script src="scripts/main.js"></script>
+    <!-- #region header -->
+    <header class="header" id="home">
+      <div class="nav">
+        <a
+          href="#home"
+          class="nav__logo nav-link"
+          aria-label="Air">
+        </a>
+        <nav class="nav-block">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav-link">About Us</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav-link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#testimonials" class="nav-link">Testimonials</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#hire" class="nav__hire nav-link">Hire Us</a>
+      </div>
+      <div class="header__bottom"></div>
+    </header>
+    <!-- #endregion -->
   </body>
 </html>

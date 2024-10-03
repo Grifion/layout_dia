@@ -1,0 +1,45 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 13px;
+  line-height: 19.5px;
+
+  &__logo {
+    width: 46px;
+    background-image: url(../images/logo/dia-logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__hire::after {
+    transition: none  ;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $after;
+    position: relative;
+    border-radius: 4px;
+    top: 8px;
+  }
+
+  &-link {
+    @include hover(transform, scale(1.2));
+    color: $header-text;
+    display: block;
+    padding: 28px 10px;
+    text-decoration: none;
+  }
+}
+
+
