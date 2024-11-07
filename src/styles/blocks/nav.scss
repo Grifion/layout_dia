@@ -1,28 +1,52 @@
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-size: 13px;
   line-height: 19.5px;
 
   &__logo {
     width: 46px;
+    height: 28px;
     background-image: url(../images/logo/dia-logo.svg);
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  &__list {
+  &__menu-logo {
     display: flex;
-    justify-content: space-around;
-    gap: 28px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__menu-button {
+    @include on-desktop {
+      visibility: collapse;
+    }
+
+    background-image: url(../images/slider/menu-button.svg);
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    background-position: center;
+  }
+
+  &__list {
+    display: none;
+
+    @include on-desktop {
+      display: flex;
+      justify-content: space-around;
+      gap: 28px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &__hire::after {
-    transition: none  ;
+    transition: none;
     content: '';
     display: block;
     width: 100%;
@@ -35,11 +59,14 @@
 
   &-link {
     @include hover(transform, scale(1.2));
+    text-transform: uppercase;
     color: $header-text;
-    display: block;
-    padding: 28px 10px;
+    padding-block: 28px;
     text-decoration: none;
+    display: block;
+  }
+
+  &-link-pading {
+    padding-inline: 10px;
   }
 }
-
-
